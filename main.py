@@ -5,17 +5,21 @@ from color import *
 from enum import Enum
 from algos.bubbleSort import bubble_sort
 from algos.quickSort import quick_sort
+from algos.selectionSort import selection_sort
 
 class Alg(Enum):
 
     BUBBLE = 1
     QUICK = 2
+    SELECTION = 3
 
     def __str__(self):
         if self.value == 1:
             return "Bubble Sort"
         elif self.value == 2:
             return "Quick Sort"
+        elif self.value == 3:
+            return "Selection Sort"
         else:
             return "Invalid?"
 
@@ -62,6 +66,8 @@ def sort():
         bubble_sort(data, drawArr, timeTick)
     elif algo_menu.get() == 'Quick Sort':
         quick_sort(data, drawArr, timeTick)
+    elif algo_menu.get() == 'Selection Sort':
+        selection_sort(data, drawArr, timeTick)
         
 
 def main():
@@ -70,7 +76,7 @@ def main():
     alg_name = ""
     speed = ""
 
-    algs = [Alg.BUBBLE, Alg.QUICK]
+    algs = [Alg.BUBBLE, Alg.QUICK, Alg.SELECTION]
     speeds = ['Slow', 'Medium', 'Fast']
     
     window = Tk()
