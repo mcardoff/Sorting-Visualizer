@@ -1,9 +1,17 @@
 #+TITLE: Python Sorting Algorithm Visualization
 #+AUTHOR: Michael Cardiff
+The purpose of this project is to practice my implmentations of various sorting algortihms. 
 * Currently Implemented Algorithms
+
 - [[https://en.wikipedia.org/wiki/Bubble_sort][Bubble Sort]]
 - [[https://en.wikipedia.org/wiki/Selection_Sort][Selection Sort]]
 - [[https://en.wikipedia.org/wiki/Quicksort][Quicksort]]
 - [[https://en.wikipedia.org/wiki/Cocktail_shaker_sort][Cocktail Shaker Sort]]
 - [[https://en.wikipedia.org/wiki/Stooge_sort][Stooge Sort]]
 
+* Planned Algorithms
+
+- [ ] [[https://en.wikipedia.org/wiki/Insertion_Sort][Insertion Sort]]
+- [ ] [[https://en.wikipedia.org/wiki/Merge_Sort][Merge Sort]]
+- [ ] [[https://en.wikipedia.org/wiki/TimSort][Timsort]]
+- [ ] [[https://en.wikipedia.org/wiki/Radix_Sort][Radix Sort]]
