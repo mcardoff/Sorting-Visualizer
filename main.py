@@ -6,12 +6,16 @@ from enum import Enum
 from algos.bubbleSort import bubble_sort
 from algos.quickSort import quick_sort
 from algos.selectionSort import selection_sort
+from algos.stoogeSort import stooge_sort
+from algos.cocktailShakerSort import cocktail_sort
 
 class Alg(Enum):
 
     BUBBLE = 1
     QUICK = 2
     SELECTION = 3
+    STOOGE = 4
+    COCKTAIL = 5
 
     def __str__(self):
         if self.value == 1:
@@ -20,8 +24,23 @@ class Alg(Enum):
             return "Quick Sort"
         elif self.value == 3:
             return "Selection Sort"
+        elif self.value == 4:
+            return "Stooge Sort"
+        elif self.value == 5:
+            return "Cocktail Sort"        
         else:
             return "Invalid?"
+
+    @staticmethod
+    def GETMAX():
+        i = 1
+        while True:
+            try:
+                Alg(i)
+                i += 1
+            except ValueError:
+                return i
+            
 
 def drawArr(data, colorArr):
     global canvas, window
@@ -68,6 +87,10 @@ def sort():
         quick_sort(data, drawArr, timeTick)
     elif algo_menu.get() == 'Selection Sort':
         selection_sort(data, drawArr, timeTick)
+    elif algo_menu.get() == 'Stooge Sort':
+        stooge_sort(data, drawArr, timeTick)
+    elif algo_menu.get() == 'Cocktail Sort':
+        cocktail_sort(data, drawArr, timeTick)
         
 
 def main():
@@ -76,7 +99,7 @@ def main():
     alg_name = ""
     speed = ""
 
-    algs = [Alg.BUBBLE, Alg.QUICK, Alg.SELECTION]
+    algs = [Alg(i) for i in range(1,Alg.GETMAX())]
     speeds = ['Slow', 'Medium', 'Fast']
     
     window = Tk()
