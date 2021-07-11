@@ -8,6 +8,7 @@ from algos.quickSort import quick_sort
 from algos.selectionSort import selection_sort
 from algos.stoogeSort import stooge_sort
 from algos.cocktailShakerSort import cocktail_sort
+from algos.insertionSort import insertion_sort
 
 class Alg(Enum):
 
@@ -16,6 +17,7 @@ class Alg(Enum):
     SELECTION = 3
     STOOGE = 4
     COCKTAIL = 5
+    INSERT = 6
 
     def __str__(self):
         if self.value == 1:
@@ -27,7 +29,9 @@ class Alg(Enum):
         elif self.value == 4:
             return "Stooge Sort"
         elif self.value == 5:
-            return "Cocktail Sort"        
+            return "Cocktail Sort"
+        elif self.value == 6:
+            return "Insertion Sort"
         else:
             return "Invalid?"
 
@@ -74,8 +78,10 @@ def set_speed():
         return 0.3
     elif speed_menu.get() == 'Medium':
         return 0.1
-    else:
+    elif speed_menu.get() == 'Fast':
         return 0.01
+    else:
+        return 0
     
 def sort():
     global data, algo_menu
@@ -91,6 +97,8 @@ def sort():
         stooge_sort(data, drawArr, timeTick)
     elif algo_menu.get() == 'Cocktail Sort':
         cocktail_sort(data, drawArr, timeTick)
+    elif algo_menu.get() == 'Insertion Sort':
+        insertion_sort(data, drawArr, timeTick)
         
 
 def main():
@@ -100,7 +108,7 @@ def main():
     speed = ""
 
     algs = [Alg(i) for i in range(1,Alg.GETMAX())]
-    speeds = ['Slow', 'Medium', 'Fast']
+    speeds = ['Slow', 'Medium', 'Fast', 'Zoom']
     
     window = Tk()
     window.title("Sorting Algorithms Visualization")
@@ -130,6 +138,8 @@ def main():
     speed_menu = ttk.Combobox(UI_frame, textvariable=speed, values=speeds)
     speed_menu.grid(row=counter, column=1, padx=5, pady=5)
     speed_menu.current(0)
+    # speed_scale = Scale(UI_frame, variable=speed, from_=0.001, to=1.0, orient=HORIZONTAL)
+    # speed_scale.grid(row=counter, column=0, padx=10, pady=5, sticky=W)
 
     counter += 1
 
