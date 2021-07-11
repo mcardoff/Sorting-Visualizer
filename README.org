@@ -16,3 +16,4 @@ The purpose of this project is to practice my implmentations of various sorting 
 - [ ] [[https://en.wikipedia.org/wiki/Merge_Sort][Merge Sort]]
 - [ ] [[https://en.wikipedia.org/wiki/TimSort][Timsort]]
 - [ ] [[https://en.wikipedia.org/wiki/Radix_Sort][Radix Sort]]
+- [ ] [[https://en.wikipedia.org/wiki/Library_Sort][Library Sort]]

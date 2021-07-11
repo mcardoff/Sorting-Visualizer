@@ -3,37 +3,34 @@ from tkinter import *
 from tkinter import ttk
 from color import *
 from enum import Enum
-from algos.bubbleSort import bubble_sort
-from algos.quickSort import quick_sort
-from algos.selectionSort import selection_sort
-from algos.stoogeSort import stooge_sort
-from algos.cocktailShakerSort import cocktail_sort
-from algos.insertionSort import insertion_sort
+from enum import auto
+from algos.sort import *
 
 class Alg(Enum):
 
-    BUBBLE = 1
-    QUICK = 2
-    SELECTION = 3
-    STOOGE = 4
-    COCKTAIL = 5
-    INSERT = 6
+    BUBBLE = auto()
+    COCKTAIL = auto()
+    INSERT = auto()
+    MERGE = auto()
+    QUICK = auto()
+    SELECT = auto()
+    STOOGE = auto()
 
-    def __str__(self):
-        if self.value == 1:
-            return "Bubble Sort"
-        elif self.value == 2:
-            return "Quick Sort"
-        elif self.value == 3:
-            return "Selection Sort"
-        elif self.value == 4:
-            return "Stooge Sort"
-        elif self.value == 5:
-            return "Cocktail Sort"
-        elif self.value == 6:
-            return "Insertion Sort"
-        else:
-            return "Invalid?"
+    # def __str__(self):
+    #     if self.value == 1:
+    #         return "Bubble Sort"
+    #     elif self.value == 2:
+    #         return "Quick Sort"
+    #     elif self.value == 3:
+    #         return "Selection Sort"
+    #     elif self.value == 4:
+    #         return "Stooge Sort"
+    #     elif self.value == 5:
+    #         return "Cocktail Sort"
+    #     elif self.value == 6:
+    #         return "Insertion Sort"
+    #     else:
+    #         return "Invalid?"
 
     @staticmethod
     def GETMAX():
@@ -87,18 +84,20 @@ def sort():
     global data, algo_menu
     timeTick = set_speed()
 
-    if algo_menu.get() == 'Bubble Sort':
+    if algo_menu.get() == "Alg.BUBBLE":
         bubble_sort(data, drawArr, timeTick)
-    elif algo_menu.get() == 'Quick Sort':
+    elif algo_menu.get() == "Alg.QUICK":
         quick_sort(data, drawArr, timeTick)
-    elif algo_menu.get() == 'Selection Sort':
+    elif algo_menu.get() == "Alg.SELECT":
         selection_sort(data, drawArr, timeTick)
-    elif algo_menu.get() == 'Stooge Sort':
+    elif algo_menu.get() == "Alg.STOOGE":
         stooge_sort(data, drawArr, timeTick)
-    elif algo_menu.get() == 'Cocktail Sort':
+    elif algo_menu.get() == "Alg.COCKTAIL":
         cocktail_sort(data, drawArr, timeTick)
-    elif algo_menu.get() == 'Insertion Sort':
+    elif algo_menu.get() == "Alg.INSERT":
         insertion_sort(data, drawArr, timeTick)
+    elif algo_menu.get() == "Alg.MERGE":
+        merge_sort(data, drawArr, timeTick)
         
 
 def main():
