@@ -24,4 +24,8 @@ This is a Python 3 project, and should be explicitly run with =python3=. Simply 
 #+BEGIN_EXAMPLE
 python3 main.py
 #+END_EXAMPLE
+If you only have Python 3 installed, then you should just use:
+#+BEGIN_EXAMPLE
+python main.py
+#+END_EXAMPLE 
 
