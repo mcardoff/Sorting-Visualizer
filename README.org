@@ -4,16 +4,24 @@ The purpose of this project is to practice my implmentations of various sorting 
 * Currently Implemented Algorithms
 
 - [[https://en.wikipedia.org/wiki/Bubble_sort][Bubble Sort]]
-- [[https://en.wikipedia.org/wiki/Selection_Sort][Selection Sort]]
-- [[https://en.wikipedia.org/wiki/Quicksort][Quicksort]]
 - [[https://en.wikipedia.org/wiki/Cocktail_shaker_sort][Cocktail Shaker Sort]]
-- [[https://en.wikipedia.org/wiki/Stooge_sort][Stooge Sort]]
 - [[https://en.wikipedia.org/wiki/Insertion_Sort][Insertion Sort]]
+- [[https://en.wikipedia.org/wiki/Merge_Sort][Merge Sort]]
+- [[https://en.wikipedia.org/wiki/Quicksort][Quicksort]]
+- [[https://en.wikipedia.org/wiki/Selection_Sort][Selection Sort]]
+- [[https://en.wikipedia.org/wiki/Stooge_sort][Stooge Sort]]
 
 * Planned Algorithms
 
 - [X] [[https://en.wikipedia.org/wiki/Insertion_Sort][Insertion Sort]]
-- [ ] [[https://en.wikipedia.org/wiki/Merge_Sort][Merge Sort]]
+- [X] [[https://en.wikipedia.org/wiki/Merge_Sort][Merge Sort]]
 - [ ] [[https://en.wikipedia.org/wiki/TimSort][Timsort]]
 - [ ] [[https://en.wikipedia.org/wiki/Radix_Sort][Radix Sort]]
 - [ ] [[https://en.wikipedia.org/wiki/Library_Sort][Library Sort]]
+
+* HOW TO RUN
+This is a Python 3 project, and should be explicitly run with =python3=. Simply run the following and the GUI will open:
+#+BEGIN_EXAMPLE
+python3 main.py
+#+END_EXAMPLE
+
